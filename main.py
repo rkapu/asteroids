@@ -44,6 +44,11 @@ def main():
                 print("Game over!")
                 sys.exit()
 
+            for s in shots:
+                if s.collides_with(a):
+                    s.kill()
+                    a.kill()
+
         for d in drawable:
             d.draw(screen)
 
